@@ -13,9 +13,9 @@
   </Thumbnail>
   <InputChannel id="0">
     <AudioInputType>Auto</AudioInputType>
-    <VideoInputType>Auto</VideoInputType>
+    <VideoInputType>HDMI</VideoInputType>
     <GraphicOverlay>
-      <Enable>false</Enable>
+      <Enable>true</Enable>
       <Position>
         <Preset>Auto</Preset>
         <X>0</X>
