@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VStreamPlatform version="2">
+  <System>
+    <DeviceName>4717-1666 - Connor</DeviceName>
+    <XMLPollInterval>15</XMLPollInterval>
+    <NTPServer>time.nist.gov</NTPServer>
+    <Timezone>Etc/UTC</Timezone>
+  </System>
+  <Thumbnail>
+    <Enable>true</Enable>
+    <Interval>5</Interval>
+    <Width>320</Width>
+  </Thumbnail>
+  <InputChannel id="0">
+    <AudioInputType>Auto</AudioInputType>
+    <VideoInputType>Auto</VideoInputType>
+    <GraphicOverlay>
+      <Enable>false</Enable>
+      <Position>
+        <Preset>Auto</Preset>
+        <X>0</X>
+        <Y>0</Y>
+        <Width>100</Width>
+        <Height>100</Height>
+        <LockAspectRatio>NoLock</LockAspectRatio>
+      </Position>
+    </GraphicOverlay>
+    <InputType>
+      <Hardware>
+        <HardwareChannel>0</HardwareChannel>
+      </Hardware>
+    </InputType>
+  </InputChannel>
+  <AudioEncoder id="244282">
+    <InputChannelID>0</InputChannelID>
+    <AudioBitrate>192</AudioBitrate>
+    <BitrateMode>Variable</BitrateMode>
+    <SelectedChannels>
+      <Channel>1</Channel>
+      <Channel>2</Channel>
+    </SelectedChannels>
+    <Codec>
+      <MPEG4_AAC/>
+    </Codec>
+  </AudioEncoder>
+  <VideoEncoder id="163810">
+    <InputChannelID>0</InputChannelID>
+    <VideoCodec>
+      <H264>
+        <Profile>High</Profile>
+      </H264>
+    </VideoCodec>
+    <VideoBitrate>11600</VideoBitrate>
+    <BitrateMode>Constant</BitrateMode>
+    <ScalingResolution>1920x1080</ScalingResolution>
+    <LimitTo30FPS>false</LimitTo30FPS>
+    <KeyframeInterval>
+      <Unit>Milliseconds</Unit>
+      <Interval>2000</Interval>
+    </KeyframeInterval>
+  </VideoEncoder>
+  <Output id="2">
+    <Enable>true</Enable>
+    <AudioSource>
+      <AudioEncoderID>244282</AudioEncoderID>
+    </AudioSource>
+    <VideoSource>
+      <VideoEncoderID>163810</VideoEncoderID>
+    </VideoSource>
+    <OutputType>
+      <SRT>
+        <CallMode>
+          <Caller>
+            <DestinationHost>3.90.163.187</DestinationHost>
+            <DestinationPort>47674</DestinationPort>
+          </Caller>
+        </CallMode>
+        <Latency>300</Latency>
+        <BandwithOverheadPercentage>25</BandwithOverheadPercentage>
+      </SRT>
+    </OutputType>
+  </Output>
+</VStreamPlatform>
